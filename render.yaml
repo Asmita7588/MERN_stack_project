@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: movie-booking-backend
+    env: node
+    plan: free
+    buildCommand: 'npm install'
+    startCommand: 'node server.js'
+    envVars:
+      - key: DATABASE_URL
+        value: your_mongodb_connection_string
+      - key: JWT_SECRET
+        value: your_jwt_secret
+      - key: STRIPE_SECRET_KEY
+        value: your_stripe_secret_key
+      - key: EMAIL_USER
+        value: your_email@gmail.com
+      - key: EMAIL_PASS
+        value: your_email_password
